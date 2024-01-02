@@ -87,7 +87,7 @@ while True:
         with open(filename, 'a') as the_file:
             stringto=name+" with ssim "+str(acc)+" was detected in camera "+str(camnum)+" at time "+str(datetime.datetime.now())+"\n"
             the_file.write(str(stringto))
-
+        
             
 
     cv2.imshow("Video", frame)
