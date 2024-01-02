@@ -7,7 +7,9 @@ from sklearn.metrics import mean_squared_error as mse
 from skimage.metrics import structural_similarity as ssim
 import numpy
 import math
-camnum=1;
+camnum=1
+count = 0
+
 
 
 def face_distance_to_conf(face_distance, face_match_threshold=0.6):
@@ -56,7 +58,8 @@ def camPreview(previewName, camIDm):
         rgb_small_frame = numpy.ascontiguousarray(small_frame[:, :, ::-1])
         if process_this_frame:
             face_locations = face_recognition.face_locations(rgb_small_frame)
-            face_encodings = face_recognition.face_encodings(rgb_small_frame, face_locations) 
+            face_encodings = face_recognition.face_encodings(rgb_small_frame, face_locations)
+            count += 1 
             face_names = []
             #print('this')
             for face_encoding in face_encodings:
