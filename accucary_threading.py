@@ -32,7 +32,7 @@ class camThread(threading.Thread):
         self.previewName = previewName
         self.camID = camID
     def run(self):
-        print("Starting here: " + self.previewName)
+        print("Starting here and now: " + self.previewName)
         camPreview(self.previewName, self.camID)
 
 
