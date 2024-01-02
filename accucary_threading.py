@@ -7,7 +7,14 @@ from sklearn.metrics import mean_squared_error as mse
 from skimage.metrics import structural_similarity as ssim
 import numpy
 import math
-camnum=1;
+from test_datetime import *
+
+
+
+
+
+count = 0
+camnum=1
 
 
 def face_distance_to_conf(face_distance, face_match_threshold=0.6):
